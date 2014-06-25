@@ -119,3 +119,5 @@ I have made the folowing modifications to the already excellent cookiecutter-dja
     * tox.ini and .travis.yaml have been modified to reflect the changes in the test setup
     * I have also added coveralls support
     * Finally, the test project is bootstrap-ready using the CDN
+
+N.B. The above changes are dependent upon my own fork of [cookiecutter](https://github.com/alixedi/cookiecutter). This is because the original cookiecutter does not have support for passing in cookiecutter context into the post generation hooks. I have added this feature and submitted a pull-request to @audreyr. A merge is eagerly awaited. Until then, bugger off!
