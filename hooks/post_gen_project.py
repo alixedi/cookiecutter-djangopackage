@@ -1,9 +1,9 @@
 #! /usr/bin/python
 import os
-import json
-from subprocess import call
-from os.path import abspath, dirname, join
+from subprocess import check_call
 
-basepath = abspath(dirname(__file__))
-path = (os.environ['repo_name'], os.environ['app_name'])
-call(['ln', '-s', '../%s/%s' % path, '../%s/demo/%s' % path])
+repo_name = os.environ['repo_name']
+app_name = os.environ['app_name']
+
+os.chdir('../%s/%s/testproject' % (repo_name, app_name))
+check_call(['ln', '-s', '../../%s' % app_name, './'])
