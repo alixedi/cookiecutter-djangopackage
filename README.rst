@@ -107,3 +107,15 @@ Add to Django Packages
 
 Once you have a release, and assuming you have an account there, just go to https://www.djangopackages.com/packages/add/ and add it there. 
 
+Modifications by @alixedi
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+I have made the folowing modifications to the already excellent cookiecutter-djangopackage:
+
+    * Added a test project inside the app folder
+    * Wrote a hook to create a symlink to the app folder inside the test project folder
+    * Modified the test setup around the test project - I feel a test project is a better and simpler way of writing tests for pluggable django apps
+    * The test project also has a test app with a single home view
+    * tox.ini and .travis.yaml have been modified to reflect the changes in the test setup
+    * I have also added coveralls support
+    * Finally, the test project is bootstrap-ready using the CDN
